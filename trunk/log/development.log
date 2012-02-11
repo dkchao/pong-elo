@@ -1,0 +1,59 @@
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (21.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (18.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateGames (20120211153204)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateGames (20120211153204)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "winner_id" integer, "loser_id" integer, "winner_score" integer, "loser_score" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120211153204')
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("games")[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-11 09:38:10 -0600
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+
+Rendered /home/dwayne/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (31.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-11 09:38:45 -0600
+  Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" [0m
+Rendered games/index.html.erb within layouts/application (58.3ms)
+Compiled application.css  (13ms)  (pid 22756)
+Compiled games.css  (19ms)  (pid 22756)
+Compiled application.js  (10ms)  (pid 22756)
+Compiled jquery.js  (1ms)  (pid 22756)
+Compiled jquery_ujs.js  (0ms)  (pid 22756)
+Compiled games.js  (393ms)  (pid 22756)
+Completed 200 OK in 606ms (Views: 605.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-11 09:38:47 -0600
+Served asset /application.css - 200 OK (20ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2012-02-11 09:38:47 -0600
+Served asset /games.css - 200 OK (7ms)
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2012-02-11 09:38:47 -0600
+Served asset /games.js - 200 OK (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-11 09:38:47 -0600
+Served asset /jquery.js - 200 OK (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-11 09:38:47 -0600
+Served asset /jquery_ujs.js - 200 OK (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-11 09:38:47 -0600
+Served asset /application.js - 200 OK (7ms)

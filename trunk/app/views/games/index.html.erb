@@ -1,0 +1,4 @@
+<% @games.each do |game| %>
+<%= game.winner_id %> beat <%= game.loser_id %> &nbsp; <%=game.winner_score %> to <%=game.loser_score %>
+<%end%>
+
